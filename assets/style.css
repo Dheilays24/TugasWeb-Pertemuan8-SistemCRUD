@@ -1,0 +1,665 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+
+    --dark: #111827;
+    --text: #374151;
+    --muted: #6b7280;
+
+    --background: #f5f7fb;
+    --white: #ffffff;
+
+    --border: #e5e7eb;
+
+    --success: #15803d;
+    --success-bg: #dcfce7;
+
+    --danger: #dc2626;
+    --danger-bg: #fee2e2;
+
+    --radius: 18px;
+
+    --shadow:
+        0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    width: 92%;
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 55px 0 35px;
+}
+
+.header h1 {
+    margin: 12px 0 8px;
+
+    font-size: 38px;
+
+    color: var(--dark);
+}
+
+.header p {
+    margin: 0;
+
+    color: var(--muted);
+}
+
+
+/* ==============================
+   BADGE
+================================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #eef2ff;
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==============================
+   BUTTON
+================================= */
+
+.btn {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+
+    border: none;
+
+    padding: 11px 17px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--primary);
+
+    color: white;
+
+    box-shadow:
+        0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-dark {
+    background: var(--dark);
+
+    color: white;
+}
+
+.btn-light {
+    background: #f3f4f6;
+
+    color: var(--text);
+}
+
+
+/* ==============================
+   STAT CARD
+================================= */
+
+.stat-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    width: fit-content;
+
+    padding: 18px 25px;
+
+    margin-bottom: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.stat-icon {
+    display: grid;
+
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    background: #eef2ff;
+
+    font-size: 22px;
+}
+
+.stat-card span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.stat-card strong {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 24px;
+
+    color: var(--dark);
+}
+
+
+/* ==============================
+   MAIN CARD
+================================= */
+
+.card {
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   TOOLBAR
+================================= */
+
+.toolbar {
+    padding: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.search-form {
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 650px;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+
+/* ==============================
+   INPUT
+================================= */
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font: inherit;
+
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+/* ==============================
+   TABLE
+================================= */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th {
+    padding: 16px 20px;
+
+    background: #f9fafb;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 17px 20px;
+
+    border-top: 1px solid var(--border);
+
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* ==============================
+   STUDENT
+================================= */
+
+.student {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.avatar {
+    display: grid;
+
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+.student strong {
+    display: block;
+
+    color: var(--dark);
+}
+
+.student small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+}
+
+.nim {
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: #f3f4f6;
+
+    font-family: monospace;
+}
+
+
+/* ==============================
+   ACTION
+================================= */
+
+.actions {
+    display: flex;
+
+    gap: 7px;
+}
+
+.action {
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.action.edit {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+.action.delete {
+    background: var(--danger-bg);
+
+    color: var(--danger);
+}
+
+
+/* ==============================
+   EMPTY
+================================= */
+
+.empty {
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.empty strong {
+    display: block;
+
+    font-size: 18px;
+
+    color: var(--dark);
+}
+
+.empty p {
+    color: var(--muted);
+}
+
+
+/* ==============================
+   PAGINATION
+================================= */
+
+.pagination {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.pagination-buttons {
+    display: flex;
+
+    gap: 5px;
+}
+
+.page-btn {
+    display: grid;
+
+    place-items: center;
+
+    min-width: 35px;
+    height: 35px;
+
+    border-radius: 8px;
+
+    background: #f3f4f6;
+
+    color: var(--text);
+
+    font-weight: 600;
+}
+
+.page-btn.active {
+    background: var(--primary);
+
+    color: white;
+}
+
+
+/* ==============================
+   ALERT
+================================= */
+
+.alert {
+    margin-bottom: 20px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+.alert.success {
+    background: var(--success-bg);
+
+    color: var(--success);
+}
+
+.alert.error {
+    background: var(--danger-bg);
+
+    color: var(--danger);
+}
+
+
+/* ==============================
+   FORM PAGE
+================================= */
+
+.form-page {
+    max-width: 650px;
+
+    margin: 60px auto;
+}
+
+.back {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-weight: 600;
+}
+
+.form-card {
+    padding: 35px;
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+.form-card h1 {
+    margin-bottom: 7px;
+
+    color: var(--dark);
+}
+
+.form-card > p {
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
+    color: var(--muted);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: var(--dark);
+}
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    padding: 30px 0;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .pagination {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+}
